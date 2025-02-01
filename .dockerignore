@@ -1,0 +1,8 @@
+.venv/
+notebooks/
+__pycache__/
+.gitgignore
+.python-version
+uv.lock
+README.md
+pyproject.toml

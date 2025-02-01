@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghanili Arabic Lyrics Search</title>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-purple-800 min-h-screen flex items-center justify-center">
+    <div class="max-w-3xl mx-auto px-6 py-12 bg-purple-300 rounded-lg shadow-lg text-center">
+        <h1 class="text-4xl font-bold text-purple-800 mb-4">غنيلي</h1>
+        <h2 class="text-2xl font-semibold text-purple-600 mb-6">بحث في كلمات الأغاني</h2>
+        <p class="text-purple-700 text-lg leading-relaxed">
+            إبحث في كلمات اكثر من 18 الف أغنية عربية!
+        </p>
+
+        <div class="flex-row items-center justify-center">
+            <input
+                class="appearance-none block w-full bg-purple-200 text-purple-700 border border-purple-500 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                type="search" name="query" type="text" required hx-post="/lyrics"
+                hx-trigger="input changed delay:500ms, keyup[key=='Enter']" hx-target="#replaceMe" />
+        </div>
+
+        <div id="replaceMe"></div>
+
+    </div>
+</body>
+
+</html>
