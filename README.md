@@ -1,10 +1,16 @@
 # Ghanili
 Arabic Lyrics Search Egnine
 
-# Running
+# Building Locally
 ```bash
 docker build -t ghanili .
 docker run -p 8080:8080 ghanili
+```
+
+# Docker Image
+```bash
+docker pull abdulrahmantabaza/ghanili:latest
+docker run -p 8080:8080 abdulrahmantabaza/ghanili:latest
 ```
 
 Then headover to `http://localhost:8080/`
