@@ -16,7 +16,7 @@ docker run -p 8080:8080 abdulrahmantabaza/ghanili:latest
 Then headover to `http://localhost:8080/`
 
 # Development Context
-1. Lyrics are scraped from `http://fnanen.com/`, they contain over 18K songs, while the site does a tremendous effort curing lyrics, songs and metadata, I would like a more complete collection, with options to add songs and make them searchable.
+1. Lyrics are scraped from `http://fnanen.com/`, they contain over 18K songs, while the site does a tremendous effort curating lyrics, songs and metadata, I would like a more complete collection, with options to add songs and make them searchable.
 2. The search is a simple [BM25](https://github.com/xhluca/bm25s) baseline, with lucene default parameters, and [Tashaphyne](https://github.com/linuxscout/tashaphyne) as the stemmer, I also use this [stopword list](https://github.com/linuxscout/arabicstopwords), the preprocessing pipeline is simple enough, and can be reviewed in `notebooks/eda.ipynb`.
 3. I would like some sort of click data streaming, and eventually, an LTR model, and semantic search, to experiment with preprocessing and more search methodologies other than lexical.
 4. The frontend for this is a static HTML file, with Tailwind CSS and htmx, the backend is a FastAPI endpoint, with Jinja templating.
